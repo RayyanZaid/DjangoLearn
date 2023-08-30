@@ -11,5 +11,7 @@ db = firestore.client()
 # Add a document to the "rides" collection
 rides_ref = db.collection('rides')
 new_ride_ref = rides_ref.add({
-    'name': 'ride1'
+    'name': 'ride400'
 })
+
+print("Updated to Firebase")

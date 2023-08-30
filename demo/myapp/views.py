@@ -6,4 +6,5 @@ from django.shortcuts import render, HttpResponse
 
 
 def index(request):
+    print("Opened Index")
     return HttpResponse("Hello World!")

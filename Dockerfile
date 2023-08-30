@@ -1,6 +1,13 @@
-FROM python:3.8
-WORKDIR /Django/app
-COPY ./myapp/requirements.txt /Django/app/requirements.txt
-COPY ./myapp/manage.py /Django/app/manage.py
+FROM python:3.11
+
+WORKDIR /app
+
+# Copy the entire project contents to /app inside the container
+COPY . /app/
+
 RUN pip install -r requirements.txt
-EXPOSE 80
+
+EXPOSE 8000
+
+# CMD ["python", "demo/manage.py" , "runserver"]
+CMD ["python", "/demo/manage.py" , "runserver" , "8000"]
