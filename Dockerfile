@@ -1,13 +1,13 @@
-FROM python:3.11
+FROM python:3.8-slim-buster
+# light-weight Linux OS
 
 WORKDIR /app
 
-# Copy the entire project contents to /app inside the container
-COPY . /app/
+COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
+COPY . .
 
-# CMD ["python", "demo/manage.py" , "runserver"]
-CMD ["python", "/demo/manage.py" , "runserver" , "8000"]
+CMD = ["python" , "demo/manage.py" , "runserver" , "0.0.0.0:8000"]
+
