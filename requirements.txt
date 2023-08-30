@@ -43,7 +43,6 @@ pycparser=2.21=pypi_0
 pycryptodome=3.18.0=pypi_0
 pyjwt=2.8.0=pypi_0
 pyparsing=3.1.1=pypi_0
-pyrebase4=4.7.1=pypi_0
 python=3.11.4=hf27a42d_0
 python-jwt=4.0.0=pypi_0
 readline=8.2=hca72f7f_0
